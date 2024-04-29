@@ -1,9 +1,21 @@
 # blueprint-proto
+This repository is separate module from the service.
+## Requirement
+- protobuf `brew install protobuf`
+- grpc gateway 
+  ```
+  go install \
+    github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway \
+    github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2 \
+    google.golang.org/protobuf/cmd/protoc-gen-go \
+    google.golang.org/grpc/cmd/protoc-gen-go-grpc
+  
+### Link reference
 
-Gitlab Repository
+https://grpc.io/docs/protoc-installation
 
+https://github.com/grpc-ecosystem/grpc-gateway
 ## Getting started
+Please read Makefile for command
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- `make pbgen`command for generate pb.go and pb.gw.go and swagger.json
