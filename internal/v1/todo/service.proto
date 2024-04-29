@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package v1.todo.service;
+
+option go_package = "github.com/robowealth-mutual-fund/blueprint-proto/pkg/v1/todo";
+
+import "grpc/gateway/protoc_gen_openapiv2/options/annotations.proto";
+import "google/api/annotations.proto";
+import "v1/todo/message/request.proto";
+import "v1/todo/message/response.proto";
+
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  info: {
+    title: "Todo Service"
+    version: "1.0.0"
+    contact: {
+      name: "Todo Service"
+    }
+  }
+
+  schemes: [HTTP, HTTPS]
+  base_path: "{BASE_PATH}"
+  consumes: "application/json"
+  produces: "application/json"
+};
+
+service TodoService {
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {
+    name: "Todo";
+    description: "Todo Service";
+  };
+
+  rpc Create(v1.todo.message.CreateRequest) returns (v1.todo.message.CreateResponse) {
+    option (google.api.http) = {
+      post: "/api/todo"
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Create todo";
+    };
+  }
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package v1.todo.message;
+
+option go_package = "github.com/robowealth-mutual-fund/blueprint-proto/pkg/v1/todo/message";
+import "grpc/gateway/protoc_gen_openapiv2/options/annotations.proto";
+
+message CreateResponse {
+  string taskName = 1 [ json_name = "taskName", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"Send Email\""
+  }];
+  string status = 2 [ json_name = "status", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"TODO\""
+  }];
+  int64 createdAt = 3 [ json_name = "createdAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "1714369904"
+  }];
+  int64 updatedAt = 4 [ json_name = "updatedAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "1714369904"
+  }];
+}
