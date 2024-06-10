@@ -9,7 +9,7 @@
   },
   "tags": [
     {
-      "name": "TodoService",
+      "name": "Todo",
       "description": "Todo Service"
     }
   ],
@@ -54,7 +54,7 @@
           }
         ],
         "tags": [
-          "TodoService"
+          "Todo"
         ]
       }
     }
