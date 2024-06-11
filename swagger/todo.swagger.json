@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Todo Service",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "contact": {
       "name": "Todo Service"
     }

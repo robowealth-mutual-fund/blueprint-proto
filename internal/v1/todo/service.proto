@@ -12,7 +12,7 @@ import "v1/todo/message/response.proto";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   info: {
     title: "Todo Service"
-    version: "1.0.0"
+    version: "1.0.1"
     contact: {
       name: "Todo Service"
     }
