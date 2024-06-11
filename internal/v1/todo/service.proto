@@ -39,4 +39,41 @@ service TodoService {
       summary: "Create todo";
     };
   }
+
+  rpc List(v1.todo.message.ListRequest) returns (v1.todo.message.ListResponse) {
+    option (google.api.http) = {
+      get: "/api/todo"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "List todo items";
+    };
+  }
+
+  rpc Get(v1.todo.message.GetRequest) returns (v1.todo.message.GetResponse) {
+    option (google.api.http) = {
+      get: "/api/todo/{id}"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Get todo by ID";
+    };
+  }
+
+  rpc Update(v1.todo.message.UpdateRequest) returns (v1.todo.message.UpdateResponse) {
+    option (google.api.http) = {
+      put: "/api/todo"
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Update todo";
+    };
+  }
+
+  rpc Delete(v1.todo.message.DeleteRequest) returns (v1.todo.message.DeleteResponse) {
+    option (google.api.http) = {
+      delete: "/api/todo/{id}"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Delete todo";
+    };
+  }
 }

@@ -14,3 +14,32 @@ message CreateRequest {
     example : "\"TODO\""
   }];
 }
+
+message ListRequest {}
+
+message GetRequest {
+  // @inject_tag: validate:"required"
+  string id = 1 [ json_name = "id", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"36aa4166-8a27-425f-b9a7-4cd1b4d65629\""
+  }];
+}
+
+message UpdateRequest {
+  // @inject_tag: validate:"required"
+  string id = 1 [ json_name = "id", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"36aa4166-8a27-425f-b9a7-4cd1b4d65629\""
+  }];
+  string taskName = 2 [ json_name = "taskName", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"Send Email\""
+  }];
+  string status = 3 [ json_name = "status", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"TODO\""
+  }];
+}
+
+message DeleteRequest {
+  // @inject_tag: validate:"required"
+  string id = 1 [ json_name = "id", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"36aa4166-8a27-425f-b9a7-4cd1b4d65629\""
+  }];
+}

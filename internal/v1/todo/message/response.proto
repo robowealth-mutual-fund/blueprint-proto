@@ -19,3 +19,52 @@ message CreateResponse {
     example : "1714369904"
   }];
 }
+
+message ListResponse {
+  string id = 1 [ json_name = "id", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"36aa4166-8a27-425f-b9a7-4cd1b4d65629\""
+  }];
+  string taskName = 2 [ json_name = "taskName", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"Send Email\""
+  }];
+  string status = 3 [ json_name = "status", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"TODO\""
+  }];
+  int64 createdAt = 4 [ json_name = "createdAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "1714369904"
+  }];
+  int64 updatedAt = 5 [ json_name = "updatedAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "1714369904"
+  }];
+}
+
+message  GetResponse {
+  string id = 1 [ json_name = "id", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"36aa4166-8a27-425f-b9a7-4cd1b4d65629\""
+  }];
+  string taskName = 2 [ json_name = "taskName", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"Send Email\""
+  }];
+  string status = 3 [ json_name = "status", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"TODO\""
+  }];
+  int64 createdAt = 4 [ json_name = "createdAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "1714369904"
+  }];
+  int64 updatedAt = 5 [ json_name = "updatedAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "1714369904"
+  }];
+}
+
+message UpdateResponse {
+  string id = 1 [ json_name = "id", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"36aa4166-8a27-425f-b9a7-4cd1b4d65629\""
+  }];
+}
+
+message DeleteResponse {
+  // Optionally include a confirmation message or other relevant info
+  string message = 1 [ json_name = "message", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"Todo item deleted successfully\""
+  }];
+}
