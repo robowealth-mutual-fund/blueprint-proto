@@ -251,7 +251,7 @@
     "messageListResponse": {
       "type": "object",
       "properties": {
-        "objects": {
+        "todo": {
           "type": "array",
           "items": {
             "type": "object",

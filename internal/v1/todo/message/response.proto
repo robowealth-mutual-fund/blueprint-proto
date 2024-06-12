@@ -39,7 +39,7 @@ message TodoResponse {
 }
 
 message ListResponse {
-  repeated TodoResponse objects = 1;
+  repeated TodoResponse todo = 1;
 }
 
 message  GetResponse {
