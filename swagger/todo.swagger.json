@@ -174,33 +174,6 @@
     }
   },
   "definitions": {
-    "ListResponseTodoItem": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "example": "36aa4166-8a27-425f-b9a7-4cd1b4d65629"
-        },
-        "taskName": {
-          "type": "string",
-          "example": "Send Email"
-        },
-        "status": {
-          "type": "string",
-          "example": "TODO"
-        },
-        "createdAt": {
-          "type": "string",
-          "format": "int64",
-          "example": 1714369904
-        },
-        "updatedAt": {
-          "type": "string",
-          "format": "int64",
-          "example": 1714369904
-        }
-      }
-    },
     "messageCreateRequest": {
       "type": "object",
       "properties": {
@@ -278,11 +251,41 @@
     "messageListResponse": {
       "type": "object",
       "properties": {
-        "items": {
+        "id": {
           "type": "array",
+          "example": "36aa4166-8a27-425f-b9a7-4cd1b4d65629",
           "items": {
-            "type": "object",
-            "$ref": "#/definitions/ListResponseTodoItem"
+            "type": "string"
+          }
+        },
+        "taskName": {
+          "type": "array",
+          "example": "Send Email",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "array",
+          "example": "TODO",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": "array",
+          "example": 1714369904,
+          "items": {
+            "type": "string",
+            "format": "int64"
+          }
+        },
+        "updatedAt": {
+          "type": "array",
+          "example": 1714369904,
+          "items": {
+            "type": "string",
+            "format": "int64"
           }
         }
       }

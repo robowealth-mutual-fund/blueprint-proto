@@ -21,30 +21,23 @@ message CreateResponse {
 }
 
 message ListResponse {
-  message TodoItem {
-    string id = 1 [json_name = "id", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-      example : "\"36aa4166-8a27-425f-b9a7-4cd1b4d65629\""
-    }];
-    string taskName = 2 [json_name = "taskName", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-      example : "\"Send Email\""
-    }];
-    string status = 3 [json_name = "status", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-      example : "\"TODO\""
-    }];
-    int64 createdAt = 4 [json_name = "createdAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-      example : "1714369904"
-    }];
-    int64 updatedAt = 5 [json_name = "updatedAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-      example : "1714369904"
-    }];
-  }
-
-  repeated TodoItem items = 6;
+  repeated string id = 1 [json_name = "id", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"36aa4166-8a27-425f-b9a7-4cd1b4d65629\""
+  }];
+  repeated string taskName = 2 [json_name = "taskName", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"Send Email\""
+  }];
+  repeated string status = 3 [json_name = "status", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "\"TODO\""
+  }];
+  repeated int64 createdAt = 4 [json_name = "createdAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "1714369904"
+  }];
+  repeated int64 updatedAt = 5 [json_name = "updatedAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    example : "1714369904"
+  }];
 }
 
-//message ListResponse {
-//  repeated TodoResponse todo = 1;
-//}
 
 message  GetResponse {
   string id = 1 [ json_name = "id", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
