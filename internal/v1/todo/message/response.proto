@@ -20,7 +20,7 @@ message CreateResponse {
   }];
 }
 
-message ListResponse {
+message TodoResponse {
   string id = 1 [ json_name = "id", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
     example : "\"36aa4166-8a27-425f-b9a7-4cd1b4d65629\""
   }];
@@ -36,6 +36,10 @@ message ListResponse {
   int64 updatedAt = 5 [ json_name = "updatedAt", (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
     example : "1714369904"
   }];
+}
+
+message ListResponse {
+  repeated TodoResponse objects = 1;
 }
 
 message  GetResponse {

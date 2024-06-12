@@ -251,6 +251,18 @@
     "messageListResponse": {
       "type": "object",
       "properties": {
+        "objects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/messageTodoResponse"
+          }
+        }
+      }
+    },
+    "messageTodoResponse": {
+      "type": "object",
+      "properties": {
         "id": {
           "type": "string",
           "example": "36aa4166-8a27-425f-b9a7-4cd1b4d65629"
